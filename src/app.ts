@@ -15,7 +15,7 @@ const app = express();
 app
   .use(cors())
   .use(express.json())
-  .get('/health', (_req, res) => res.status(httpStatus.OK).send('I\'m OK myself!'))
+  .get('/health', (_req, res) => res.status(httpStatus.OK).send('OK!'))
   .use('/users', usersRouter)
   .use('/auth', authenticationRouter)
   .use('/event', eventsRouter)
